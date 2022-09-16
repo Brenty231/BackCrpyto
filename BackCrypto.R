@@ -10,7 +10,7 @@
 ## they typically enter these investments with limited knowledge of crypto's key differences
 #  with other types of investments such as regulation, ledger structure, and intrinsic value 
 
-## On January 2, 2022, Bitcoin's hashrate(Total amount of computing power used by miners to mine new bitcoins is at an all-time high)
+## On January 2, 2022, Bitcoin's hashrate(Total amount of computing power used by miners to mine new bitcoins) is at an all-time high)
 #  Not only is this more efficient, it makes the network more robust and resistant to attacks
 
 ## This could entice more investors to enter this market as it will become more competitive but even more prone to volatility
@@ -170,7 +170,7 @@ NROW(bitData[is.finite(ret10)&ret10>0&month==10]) ## October has 186 positive 10
 ggplot(data=bitData[is.finite(ret10)&ret10>0], aes(x=quarter))+geom_bar(fill='saddlebrown')+scale_x_continuous(breaks=1:12)+ggtitle('Positive 10-Day Returns by Quarter: Bitcoin, September 2014 - December 2021')
 ## Q4 has the highest number of 10-day returns
 
-## 20-day-returns:
+## 20-day returns:
 
 ggplot(data=bitData[is.finite(ret20)&ret20>0], aes(x=month))+geom_bar(fill='cyan3')+scale_x_continuous(breaks=1:12)+ggtitle('Positive 20-Day Returns by Month: Bitcoin, September 2014 - December 2021')
 ## 3-highest counts(descending): October, April, July 
@@ -218,7 +218,7 @@ sdm=data.frame(month=a, sd1 )
 sdm
 ## January had the highest standard deviation for daily returns, followed by March and December
 
-## 5 day returns:
+## 5-day returns:
 bit5=bitData[is.finite(ret5)]
 bagplot(bit5$month, bit5$ret5, cex=1.2, main='Bitcoin 5-Day Return Distribution by Month', xlab='Month', ylab='Return')
 ## December has the most volatile 5 day price fluctuations 
@@ -258,7 +258,7 @@ sdm=data.frame(month=a, sd20 )
 sdm
 ## November has the highest standard deviation, followed by May and January 
 
-## 45 day-returns:
+## 45-day returns:
 bit45=bitData[is.finite(ret45)]
 bagplot(bit45$month, bit45$ret45, cex=1.2,  main='Bitcoin 45-Day Return Distribution by Month', xlab='Month', ylab='Return')
 ## October and November show the most outliers(December is not included since our horizons are contained within quarters)
@@ -271,7 +271,7 @@ sdm=data.frame(month=a, sd45 )
 sdm
 ## November has the highest standard deviation, followed by October and April
 
-## 60-day-returns:
+## 60-day returns:
 bit60=bitData[is.finite(ret60)]
 bagplot(bit60$month, bit60$ret60, cex=1.2,  main='Bitcoin 60-Day Return Distribution by Month', xlab='Month', ylab='Return')
 ## October shows the most volatility, with values again shifted above the median 
